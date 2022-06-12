@@ -1,8 +1,11 @@
+import logoImg from './icons/weather-logo-200px.png';
+import logoSearch from './icons/icons8-google-web-search-64.png';
+
 export const initWeatherBlock = (function () {
   document.body.innerHTML = `
     <header>
       <div class="logo">
-        <img src="../src/icons/weather-logo-200px.png">
+        
       </div>
       <form id="weather">\
         <input
@@ -14,7 +17,7 @@ export const initWeatherBlock = (function () {
           required
         />
         <button id="submit" type="submit">
-          <img src="../src/icons/icons8-google-web-search-64.png" />
+          
         </button>
         <fieldset id="select-temperature">
           <legend>Select units:</legend>
@@ -37,4 +40,12 @@ export const initWeatherBlock = (function () {
       <div class="spinner"></div>
       <div class="load-text">Loading weather data...</div>
     </div>`;
+
+  let imgS = new Image(30, 30);
+  let imgL = new Image(120, 120);
+  imgS.src = logoSearch;
+  imgL.src = logoImg;
+  document.querySelector('#submit').appendChild(imgS);
+  document.querySelector('.logo').appendChild(imgL);
+ 
     })();

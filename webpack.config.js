@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlagin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -9,6 +10,11 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         
     },
+    plugins: [
+        new HtmlWebpackPlagin({
+            title: 'Weather forecast',
+        }),
+    ],
     module: {
         rules: [
             {
