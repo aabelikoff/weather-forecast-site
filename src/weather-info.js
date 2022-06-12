@@ -30,6 +30,7 @@ const weather = function () {
                 throw new Error(response.statusText);
             }
             let object = await response.json();
+            spinner.style.display = 'none';
             return object;
         } catch (error) {
             currentPlace.textContent = displayError(error.message);
