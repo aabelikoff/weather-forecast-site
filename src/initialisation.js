@@ -12,7 +12,7 @@ export const initWeatherBlock = (function () {
           type="text"
           id="place"
           name="place"
-          pattern="([a-zA-Zа-яА-Яа-яА-Я ]+)"
+          pattern="([a-zA-Zа-яА-Яа-яА-Я їЇєЄ']+)"
           placeholder="Enter place"
           required
         />
